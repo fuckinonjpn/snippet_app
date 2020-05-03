@@ -11,7 +11,7 @@ services:
       MYSQL_DATABASE: app_name_development
       MYSQL_TCP_PORT: 3306
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - ./db/data/mysql:/var/lib/mysql
 
@@ -22,7 +22,7 @@ services:
       - .:/app_name
       - /app_name/db/data
     ports:
-      - "3000:3000"
+      - "3001:3000"
     links:
       - db
     tty: true
